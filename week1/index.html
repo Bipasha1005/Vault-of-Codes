@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipasha Acharjee - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/91e8b89e13.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top on">
+                <img src="logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <!-- <li><a href="#about">Experiences</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="hearder-text">
+                <div class="container">
+                    <div class="bg">
+                        <div class="bgimg">
+                        <h1>Hi! I am <span>Bipasha</span></h1>
+                        <!-- <p>Frontend Developer</p> -->
+                        <span id="element"></span>
+                        <!-- <p><span>Cyber Sec Enthusiast</span></p> -->
+                        </div>
+                        <div class="bgimg">
+                            <img src="bgimg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------- about --------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="abour-col1">
+                    <img src="user.jpg" alt="My photo">
+                </div>
+                <div class="abour-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate about <span>CYBERSECURITY</span>. Currently expanding skills in Python, JavaScript, backend development and Java. Learning LINUX and NETWORKING FUNDAMENTALS for my DREAM FUTURE. Outside of work, I like to travel to new places and lose myself in storybooks. Let's connect and talk about how technology and cybersecurity are changing.</p>
+                    <div class="tab-titels">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>Developer</li>
+                            <li><span>php</span><br>Developer</li>
+                            <!-- <li><span>Web Development</span><br>Web app Development</li> -->
+                            <li><span>Cyber Security</span><br>Enthusiast</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July 2024</span><br>Web Developer Internship at VaultOfCodes</li>
+                            <li><span>April 2024</span><br>Frontend Developer Internship at MotionCut</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Present</span><br>B.Tech in Computer Science and Engineering from JIS
+                                College of Engineering</li>
+                            <li><span>2020 - 2022</span><br>Higher Secondary with PCMB from Halisahar Ramprasad Vidyapith</li>
+                            <!-- <li><span>2014 - 2020</span><br>Secondary from Halisahar</li>
+                            <li><span>Cyber Security</span><br>Enthusiast</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li><span>Cyber Security</span><br>captivates me with its critical role in protecting digital assets and ensuring privacy in our interconnected world.</li>
+                            <li><span>Ethical Hacking</span><br>fuels my passion for leveraging technical skills to enhance cybersecurity measures responsibly and ethically.</li>
+                            <li><span>Cryptography</span><br>captivates me with its artful blend of mathematics and technology, securing information in an increasingly digital world.</li>
+                            <li><span>Forensic Science</span><br>intrigues me with its pivotal role in uncovering digital evidence and solving complex cybercrimes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------ services ---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Web design</h2>
+                    <p>The development of websites involves the creation of functional, visually appealing platforms using programming languages like HTML and CSS, focusing on user interaction and functionality.</p>
+                    <a href="https://en.wikipedia.org/wiki/Web_design">Learn more...</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Frontend Development</h2>
+                    <p>Frontend development involves creating visible website elements using HTML, CSS, and JavaScript, collaborating with backend developers for seamless user experience, enhancing usability and appeal.</p>
+                    <a href="https://en.wikipedia.org/wiki/Front-end_web_development">Learn more...</a>
+                </div>
+                <!-- <div>
+                    <h2>Web design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit adipisci hic quos recusandae quas dolor a quam dolorum, fugiat corporis optio rerum incidunt ad ea itaque facilis ducimus. Omnis, eligendi ratione?</p>
+                    <a href="#">learn more...</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- ------------------- projects ------------------ -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work1.png" alt="work1">
+                    <div class="layer">
+                        <h3>Gurukul: Your Gateway to Quality Education and Student Services</h3>
+                        <p>Gurukul is a cutting-edge platform that revolutionizes education by providing a dynamic learning space for students. It empowers educators to deliver immersive lessons, share comprehensive notes, and conduct exams, fostering a holistic educational journey and guiding excellence.</p>
+                        <a href="https://gurukul2023.000webhostapp.com/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work2.png" alt="work2">
+                    <div class="layer">
+                        <h3>Online Blood Bank Management System</h3>
+                        <p>The Online Blood Bank Management System is a new tool designed to streamline blood donation and distribution processes. It offers easy donor registration, real-time tracking of available blood types, efficient request management, instant notifications for urgent blood needs, and a user-friendly interface. The system aims to bridge the gap between donors and recipients, potentially saving lives.</p>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="work3.png" alt="work3">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, nam aspernatur enim
+                            temporibus eos debitis doloremque. Dolores distinctio corrupti nobis impedit aperiam aliquid
+                            deleniti dolorem. Voluptate cumque deleniti veniam quo distinctio!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <a href="#" class="btn">See more...</a>
+        </div>
+    </div>
+    <!-- ------------- contact -------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> bipashaacharjee02@gmail.com</p>
+                    <!-- <p><i class="fa-solid fa-phone"></i></p> -->
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/bipasha-acharjee-b34939253/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Bipasha1005"><i class="fa-brands fa-github"></i></a>
+                        <!-- <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a> -->
+                    </div>
+                    <a href="mycv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="copyright">
+            <p>copyright </p>
+        </div> -->
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwo6jeNT82UTh61EKVXJfnmYL1FYmrbY5me_r1LaJQRun2oryWV6UieUkyk00ba3xFffg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<!-- Setup and start animation! -->
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Cyber Security Enthusiast','Web Designer'],
+      typeSpeed: 50,
+    });
+  </script>
+  
+</body>
+
+</html>
