@@ -22,37 +22,6 @@ body {
   --calculate: calc(3 / 2);
 }
 
-/* header{
-    display: grid;
-    grid-template-columns: 80px 1fr calc(var(--w-image) * var(--calculate));
-    grid-template-rows: 80px;
-    position: relative;
-    z-index: 10;
-    border-bottom: 1px solid var(--border-color);
-}
-header .logo img{
-    width: 80%;
-}
-header .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header nav a{
-    color: #000;
-    font-weight: 400;
-}
-header nav ul{
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 30px;
-    padding-right: 30px;
-}
-header nav{
-    border-left: 1px solid var(--border-color);
-} */
 .carousel {
   margin-top: -80px;
   width: 100%;
@@ -151,7 +120,7 @@ header nav{
   margin: 20px 0;
 }
 
-.carousel .list .item .main-content .content .addToCard {
+.carousel .list .item .main-content .content .details {
   background-color: #68ebd5c4;
   color: #1c0449;
   padding: 10px 30px;
@@ -328,7 +297,7 @@ header nav{
   .carousel .list .item .main-content .content h2 {
     display: none;
   }
-  .carousel .list .item .main-content .content .addToCard {
+  .carousel .list .item .main-content .content .details {
     display: none;
   }
 /* 
