@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawsome5 w3schools intro -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- boxicon usage  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="bg">
+        <!-- <img src="bg.jpg" alt="background" class="bg-img"> -->
+        <div class="content">
+            <header>Register Here</header>
+            <form>
+                <div class="user-details">
+
+                    <div class="field">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="Enetr your first name" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="details">Last Name</span>
+                        <input type="text" class="colo" placeholder="Enter your last name" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="details">Email</span>
+                        <input type="email" class="colo" placeholder="Enter your email" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="details">Date of Birth</span>
+                        <input type="date" class="colo" placeholder="dd-mm-yyyy" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="details">Password</span>
+                        <input type="password" class="password" placeholder="Enter Password" required />
+                        <!-- <i class='bx bxs-hide eye-icon'></i> -->
+                        <span class="show">Show</span>
+                    </div>
+
+                    <div class="field">
+                        <span class="details">Confirm password</span>
+                        <input type="password" class="cpassword" placeholder="Confirm your Password" required />
+                        <span class="cshow">Show</span>
+                    </div>
+
+                    <div class="field drop-down">
+                        <div class="column">
+                            <div class="select-box">
+                                <select name="" id="">
+                                    <option value="">Gender</option>
+                                    <option value="">Female</option>
+                                    <option value="">Male</option>
+                                    <option value="">Transgender</option>
+                                    <option value="">Non-binary</option>
+                                    <option value="">Non-conforming</option>
+                                    <option value="">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field drop-down">
+                        <div class="column">
+                            <div class="select-box">
+                                <select>
+                                    <option>Preferred Pronoun</option>
+                                    <option>He/Him</option>
+                                    <option>She/Her</option>
+                                    <option>They/Them</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="check-box">
+                    <input type="checkbox" id="SignupCheck" required />
+                    <label for="SignupCheck">I accept all the terms & conditions</label>
+                </div>
+
+                <div class="btn">
+                    <input type="submit" value="Signup">
+                    <!-- <button>Suubmit</button> -->
+                </div>
+
+                <div class="signin">
+                    <span>Already have an account?</span><a href="#" class="link">Login Here</a>
+                </div>
+
+            </form>
+            <div class="line"></div>
+
+            <div>
+
+                <button class="media-options" id="glogin">
+                    <i class='bx bxl-google google-icon'></i>
+                    <span>Sign in using Google</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script>
+        const pass_field = document.querySelector('.password');
+        const show_btn = document.querySelector('.show');
+        show_btn.addEventListener('click', function () {
+            if (pass_field.type == "password") {
+                pass_field.type = "text";
+                show_btn.style.color = "#3498db";
+                show_btn.textContent = "Hide"
+            } else {
+                pass_field.type = "password";
+                show_btn.style.color = "#222";
+                show_btn.textContent = "Show"
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBr2QO9T4enUINbIsHXlPsiLpyjHeg_R14",
+            authDomain: "registration-page-ad59e.firebaseapp.com",
+            projectId: "registration-page-ad59e",
+            storageBucket: "registration-page-ad59e.appspot.com",
+            messagingSenderId: "730586890286",
+            appId: "1:730586890286:web:341dc4c457b4e610151fbf"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const provider = new GoogleAuthProvider(app);
+        const auth = getAuth(app);
+        // auth.languageCode = 'en'
+
+
+        // const googleLogin = document.getElementById("glogin");
+        glogin.addEventListener("click", (e) => {
+            signInWithRedirect(auth, provider);
+
+            getRedirectResult(auth)
+                .then((result) => {
+                    // This gives you a Google Access Token. You can use it to access Google APIs.
+                    const credential = GoogleAuthProvider.credentialFromResult(result);
+                    const token = credential.accessToken;
+
+                    // The signed-in user info.
+                    const user = result.user;
+
+                    alert(user.displayName);
+                    // IdP data available using getAdditionalUserInfo(result)
+                    // ...
+                }).catch((error) => {
+                    // Handle Errors here.
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // The email of the user's account used.
+                    const email = error.customData.email;
+                    // The AuthCredential type that was used.
+                    const credential = GoogleAuthProvider.credentialFromError(error);
+                    // ...
+
+            alert(errorMessage);
+                });
+
+            // signInWithPopup(auth, provider)
+            //     .then((result) => {
+            //         // This gives you a Google Access Token. You can use it to access the Google API.
+            //         const credential = GoogleAuthProvider.credentialFromResult(result);
+            //         const token = credential.accessToken;
+            //         // The signed-in user info.
+            //         const user = result.user;
+
+            //         alert(user.displayNmae);
+            //         // IdP data available using getAdditionalUserInfo(result)
+            //         // ...
+            //     }).catch((error) => {
+            //         // Handle Errors here.
+            //         const errorCode = error.code;
+            //         const errorMessage = error.message;
+            //         // The email of the user's account used.
+            //         const email = error.customData.email;
+            //         // The AuthCredential type that was used.
+            //         const credential = GoogleAuthProvider.credentialFromError(error);
+            //         // ...
+
+            //         alert(errorMessage);
+            //     });
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+body::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 600px;
+    padding: 30px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.content header {
+    color: rgb(191, 255, 220);
+    font-size: 33px;
+    font-weight: 600;
+    position: relative;
+    margin: 0 0 15px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #3498db;
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px 0 12px 0;
+}
+
+form .user-details .field {
+    margin-bottom: 5px;
+    width: calc(100% / 2 - 20px);
+    position: relative;
+}
+
+.user-details .field .details {
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-left: 0;
+    color: #cbeaff;
+}
+
+.user-details :where(.field input, .select-box) {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    background: #ffffff;
+    color: #707070;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+}
+
+.user-details .field input:focus,
+.user-details .field input:valid {
+    border-color: #0b74b9;
+}
+
+.drop-down :where(input, .select-box) {
+    margin-top: 10px;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 17px;
+}
+
+form .check-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.check-box input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    accent-color: #52ac70;
+    cursor: pointer;
+}
+
+form .check-box label {
+    cursor: pointer;
+    color: #fff;
+}
+
+/* .eye-icon {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-30%);
+    cursor: pointer;
+    padding: 5px;
+} */
+
+form .btn {
+    height: 45px;
+    margin: 25px 0;
+}
+
+form .btn input {
+    padding: 10px;
+    margin: 0 50px;
+    height: 100%;
+    width: 80%;
+    outline: none;
+    color: #ffffff;
+}
+
+.show {
+    display: none;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-10%);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.password:valid~.show {
+    display: block;
+}
+
+.cshow {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-10%);
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.cpassword:valid~.cshow {
+    display: block;
+}
+
+input[type=submit] {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 211, 252, 0.8211659663865546) 100%);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+input[type=submit]:hover {
+    background: rgb(50, 143, 162);
+    background: radial-gradient(circle, rgba(50, 143, 162, 0.9108018207282913) 24%, rgba(8, 24, 64, 0.9444152661064426) 86%);
+    border: 1px solid #2691d9;
+}
+
+.signin {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.signin a {
+    color: wheat;
+    text-decoration: none;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+    color: #4bcaaa;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 16px 0;
+    background-color: #d4d4d4;
+}
+
+.line::before {
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff00;
+    color: rgb(227, 184, 255);
+    padding: 0 15px;
+}
+
+.content .media-options {
+    display: flex;
+    /* background: #fff; */
+    background: linear-gradient(-120deg, #4286f4d8, #34a853d2, #fbbd05d2, #ea4435ce);
+    border-radius: 30px;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid rgba(255, 0, 0, 0.603);
+    /* color: #1a73e8; */
+    color: wheat;
+    cursor: pointer;
+}
+
+/* .media-options :hover {
+    background: linear-gradient(-120deg, #4286f4d8, #34a853d2, #fbbd05d2, #ea4435ce);
+    color: wheat;
+} */
+
+
+@media (max-width: 584px) {
+    .content {
+        max-width: 100%;
+    }
+
+    form .user-details .field {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+}
