@@ -2,7 +2,7 @@
 Web Developer Internship at Vault of Codes
 
 First project from Week1 check here:
-https://acharjeebipashaportfolio.netlify.app/
+https://bipashaacharjeeportfolio.netlify.app/
 
 Second Project from Week2 checkout here:
 https://internshipatvaultofcodes.netlify.app/
